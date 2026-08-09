@@ -128,11 +128,13 @@ src/
 
 Cada recurso tiene:
 
+```bash
 id
 name
 description
 createdAt
 updatedAt (si se actualiza)
+```
 
 ### Rutas Principales
 
