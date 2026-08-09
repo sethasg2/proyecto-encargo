@@ -53,6 +53,104 @@ SESSION_SECRET=supersecret
 npm run dev
 ```
 
+### Cómo probar la API
+
+### 1. Login
+
+POST  
+
+http://localhost:4000/api/auth/login
+
+Body:
+
+```bash
+{
+  "username": "admin",
+  "password": "adminpass"
+}
+```
+### 2. Logout
+
+POST  
+
+http://localhost:4000/api/auth/logout
+
+### 3. Obtener recursos (requiere login)
+
+GET  
+
+http://localhost:4000/api/resources
+
+### 4. Crear recurso
+
+POST  
+
+http://localhost:4000/api/resources
+
+Body:
+
+```bash
+{
+  "name": "Primer recurso",
+  "description": "Recurso de prueba"
+}
+```
+
+### 5. Actualizar recurso
+
+PUT  
+
+http://localhost:4000/api/resources/1
+
+Body:
+
+```bash
+{
+  "name": "Recurso actualizado",
+  "description": "Descripción nueva"
+}
+
+```
+
+### Estructura del Proyecto
+
+src/
+ ├── controllers/      # Lógica de cada ruta
+ ├── middlewares/      # Validaciones y protección de rutas
+ ├── models/           # Datos o estructuras
+ ├── routes/           # Endpoints de la API
+ ├── services/         # Funciones auxiliares
+ └── server.js         # Punto de entrada del servidor
+
+
+###  Recursos
+
+Cada recurso tiene:
+
+id
+name
+description
+createdAt
+updatedAt (si se actualiza)
+
+### Rutas Principales
+
+Auth
+
+```bash
+POST /api/auth/login
+POST /api/auth/logout
+```
+
+Resources
+
+```bash
+GET /api/resources
+POST /api/resources
+PUT /api/resources/:id
+```
+
+
 ### Creado por Alejandro Soto G.
 Estudiante Ingenieria Ciencias de Datos, Instituto Profesional IPG
 
