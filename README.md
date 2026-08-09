@@ -114,6 +114,7 @@ Body:
 
 ### Estructura del Proyecto
 
+```bash
 src/
  ├── controllers/      # Lógica de cada ruta
  ├── middlewares/      # Validaciones y protección de rutas
@@ -121,7 +122,7 @@ src/
  ├── routes/           # Endpoints de la API
  ├── services/         # Funciones auxiliares
  └── server.js         # Punto de entrada del servidor
-
+```
 
 ###  Recursos
 
