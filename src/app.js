@@ -20,7 +20,7 @@ app.use(cors({ origin: process.env.CLIENT_ORIGIN || true, credentials: true }));
 app.use(express.json());
 app.use(morgan('dev'));
 
-// Redis client para sesiones (si no quieres Redis, puedes usar MemoryStore en desarrollo)
+// Redis client para sesiones 
 const redisUrl = process.env.REDIS_URL || 'redis://localhost:6379';
 const redisClient = createClient({ url: redisUrl });
 redisClient.connect().catch(err => {
