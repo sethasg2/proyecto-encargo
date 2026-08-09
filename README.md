@@ -27,20 +27,31 @@ git clone https://github.com/sethasg2/proyecto-encargo
 ```
 
 ### 2. Instalar dependencias
+
+```bash
 npm install
+```
 
 ### 3. Encender Redis
+
+```bash
 cd C:\redis
 .\redis-server.exe
+```
 
 ### 4. Crear archivo .env
+
+```bash
 PORT=4000
 REDIS_URL=redis://127.0.0.1:6379
 SESSION_SECRET=supersecret
+```
 
 ### 5. Iniciar servidor en la terminal del proyecto
-npm run dev
 
+```bash
+npm run dev
+```
 
 ### Creado por Alejandro Soto G.
 Estudiante Ingenieria Ciencias de Datos, Instituto Profesional IPG
